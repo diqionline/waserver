@@ -1,0 +1,21 @@
+{
+  "name": "wa-server-baileys",
+  "version": "1.0.0",
+  "description": "Baileys-based WhatsApp pairing server for admin UI",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "prod": "pm2 start server.js --name wa-gateway",
+    "stop": "pm2 stop wa-gateway",
+    "restart": "pm2 restart wa-gateway",
+    "logs": "pm2 logs wa-gateway"
+  },
+  "dependencies": {
+    "@whiskeysockets/baileys": "^6.6.0",
+    "axios": "^1.13.4",
+    "cors": "^2.8.5",
+    "express": "^4.22.1",
+    "pino": "^8.0.0",
+    "qrcode": "^1.5.1"
+  }
+}
